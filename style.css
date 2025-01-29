@@ -1,0 +1,46 @@
+body{
+    background-image:url(https://i.pinimg.com/originals/15/45/d1/1545d182f341c0eeef86f6d59ca3165e.gif);
+}
+.calendar{
+    display: grid;
+    grid-template-columns:repeat(6, 240px) ;
+    gap: 10px;
+}
+.day{
+    font-family: "Jersey 15", serif;
+    font-weight: 500; 
+    columns: rgb(5, 5, 70);
+    height: 180px;
+    width: 180px;
+    font-size: 150px;
+    background: linear-gradient(135deg, rgb(154, 249, 154), rgb(240, 106, 106));
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.64);
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+.day:hover{
+    transform: translateY(-5px);
+}
+.day img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0 ;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+.day.open{
+    background-color: transparent;
+}
+.day.open img{
+     z-index: 2;
+     opacity: 1;
+}
